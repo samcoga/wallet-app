@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 var schema = new Schema({
     shortName: { type: String, unique: true },
     description: String,
-    frecuency: { type: String, enum: ['week', 'fortnight', 'monthly', 'daily'] },
+    frecuency: { type: String, enum: ['week', 'fortnight', 'monthly', 'daily', 'once'] },
     amount: Double,
     updated: { type: Date, default: Date.now }
 });
