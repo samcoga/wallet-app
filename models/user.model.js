@@ -6,10 +6,10 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
     
 var schema = new Schema({
-    email: { type: String, unique: true, lowercase: true },
+    email: { type: String, required: true, unique: true, lowercase: true },
     password: { type: String, select: false },
-    firstName: String,
-    lastName: String,
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
     isConfirm: Boolean,
     updated: { type: Date, default: Date.Now }
 });
