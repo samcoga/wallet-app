@@ -8,7 +8,7 @@ var schema = new Schema({
     shortName: { type: String, unique: true },
     description: String,
     frecuency: { type: String, enum: ['week', 'fortnight', 'monthly', 'daily', 'once'] },
-    amount: Double,
+    amount: Number,
     dateCharge: { type: Date, default: Date.now },
     updated: { type: Date, default: Date.now }
 });
